@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henrik Nguyen</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(23, 50, 77, 0.6), rgba(47, 93, 124, 0.6)), url('BANNER.JPG') center/cover no-repeat;
+      color: white;
+      padding: 90px 20px 80px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.15rem;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    nav {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      text-align: center;
+      padding: 14px 10px;
+    }
+
+    nav a {
+      color: #17324d;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 16px;
+      font-size: 0.98rem;
+    }
+
+    nav a:hover {
+      color: #2f5d7c;
+    }
+
+    .main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #17324d;
+      font-size: 1.8rem;
+    }
+
+    .hero-note {
+      font-size: 1.05rem;
+      color: #e8f0f6;
+    }
+
+    .highlight {
+      border-left: 5px solid #2f5d7c;
+      padding-left: 18px;
+      margin-top: 20px;
+      font-size: 1.03rem;
+    }
+
+    .bio-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .photo-box {
+      border-radius: 14px;
+      overflow: hidden;
+      height: 280px;
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .mini-card {
+      background: #f7fafc;
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid #dde7ee;
+    }
+
+    .mini-card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: #17324d;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #17324d;
+      color: white;
+      padding: 22px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.3rem;
+      }
+
+      .bio-layout {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 10px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Henrik Nguyen</h1>
+    <p class="hero-note">
+      Mechanical Engineering student at CU Boulder with a passion for hands-on design, CAD, and building ideas into real systems.
+    </p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#bio">Bio</a>
+  </nav>
+
+  <main class="main">
+    <section class="card" id="home">
+      <h2>Homepage</h2>
+      <p>
+        Welcome to my website. My name is Henrik Nguyen, and I am a junior studying Mechanical Engineering at the University of Colorado Boulder with a minor in Engineering Management. This website is meant to introduce who I am, what I am interested in, and the path I am building for myself as an engineer.
+      </p>
+      <p>
+        I see this website as more than just a class assignment. It can also serve as the beginning of a portfolio where professors, potential employers, classmates, and anyone interested in my work can learn more about me and the projects I care about. Over time, it could grow to include more detailed project pages, engineering work, and photos that show my development and experience.
+      </p>
+      <div class="highlight">
+        I want people who visit this site to immediately understand that I am a down-to-earth person who is always trying to make the most of every opportunity. I value learning, growth, and putting in my best effort in everything I do.
+      </div>
+    </section>
+
+    <section class="card" id="bio">
+      <h2>Bio</h2>
+      <div class="bio-layout">
+        <div class="photo-box">
+          <img src="PFP.JPG" alt="Profile Picture">
+        </div>
+        <div>
+          <p>
+            Hello! My name is Henrik Nguyen, and I am a junior studying Mechanical Engineering at the University of Colorado Boulder. I enjoy hands-on work, especially turning CAD designs into real, physical builds. I am interested in applying engineering to real-world systems, and after graduation I hope to work in aerospace, defense, or robotics where I can design and improve complex systems.
+          </p>
+          <p>
+            I have always liked figuring out how things work. Whether it was taking apart objects, understanding systems in games, or solving everyday problems, that curiosity naturally led me to engineering. A defining moment for me was taking a CAD class in high school, where I was able to design something digitally and then physically create it. Seeing that process from concept to reality made me realize this was the field I wanted to pursue.
+          </p>
+          <p>
+            Since then, I have continued building on that interest through hands-on projects. I started with things like trebuchets and gear-driven cars, and now work on larger projects like drill-powered bikes, windmills, and fabrication-based builds in college. I also have an upcoming internship this summer at Mead & Hunt, where I will work as a Mechanical Engineering Intern. In this role, I will contribute to building systems such as HVAC while collaborating with engineers from different disciplines.
+          </p>
+          <p>
+            Looking ahead, my goal is to graduate, complete my master’s through the BAM program, and become a professional engineer. I want to work in an industry I am passionate about and continue gaining experience through projects, internships, and new opportunities. What excites me most about engineering is the creativity involved. Even when problems have a single correct answer, there are many ways to approach them. Being able to design, iterate, and improve solutions is what makes the work interesting to me.
+          </p>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="mini-card">
+          <h3>Major / Minor</h3>
+          <p>Mechanical Engineering with a minor in Engineering Management</p>
+        </div>
+        <div class="mini-card">
+          <h3>Current Stage</h3>
+          <p>Junior at CU Boulder and planning to continue into the BAM program</p>
+        </div>
+        <div class="mini-card">
+          <h3>Upcoming Internship</h3>
+          <p>Mechanical Engineering Intern at Mead & Hunt</p>
+        </div>
+        <div class="mini-card">
+          <h3>Career Interests</h3>
+          <p>Aerospace, defense, and possibly robotics</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Henrik Nguyen</p>
+  </footer>
+</body>
+</html>
